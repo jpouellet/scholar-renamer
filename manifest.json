@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Scholar Renamer",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "16": "pencil-16.png",
+    "128": "scholar-128.png"
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://scholar.vt.edu/portal",
+      "https://scholar.vt.edu/portal/",
+      "https://scholar.vt.edu/portal/*"
+    ],
+    "js": ["inject.js"],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage",
+    "tabs"
+  ]
+}
