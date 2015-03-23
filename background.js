@@ -13,7 +13,7 @@ chrome.contextMenus.onClicked.addListener(och);
 chrome.runtime.onInstalled.addListener(function() {
   console.log('init'); // XXX
   var menu = chrome.contextMenus.create({
-    "title": "Edit",
+    "title": "Edit Scholar Tab Name",
     "id": "edit",
     "contexts": ["link"],
     "targetUrlPatterns": ["https://scholar.vt.edu/portal/site/*"]
