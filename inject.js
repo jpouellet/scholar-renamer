@@ -7,12 +7,21 @@ for (var i = 0; i < spans.length; i++) {
     // fix dumb redundant tooltip
     a.title = a.title.replace(span.textContent+': ', '');
     
-    var uuid_search = (href_re.exec(a.href) || data_re.exec(a.nextElementSibling.getAttribute('data')));
-    if (uuid_search === null) {
+    var uuid_search = (href_re.exec(a.href));
+    var uuid;
+    if (uuid_search === null && a.nextElementSibling !== null) {
+      if ((uuid_search = data_re.exec(a.nextElementSibling.getAttribute('data'))) !== null) {
+        uuid = uuid_search[1];
+      } else {
+        console.log("null uuid search results");
+        return;
+      }
+    } if (uuid_search === null) {
       console.log("null uuid search results");
-      return;
-    }
-    var uuid = uuid_search[1];
+      return;   
+    } else {
+      uuid = uuid_search[1];
+    };
 
     // rename
     chrome.storage.sync.get(uuid, function(items) {
