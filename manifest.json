@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Scholar Tab Renamer",
-  "description": "It's \"Circuits\", not \"ECE_2004_12403_201501\"!",
-  "version": "1.0.1",
+  "description": "Because humans use names, not CRNs!",
+  "version": "1.0.2",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
