@@ -1,4 +1,7 @@
-# [Scholar](https://scholar.vt.edu/portal) tab renamer
+# [Scholar][scholar] tab renamer ([web store][webstore])
+
+[scholar]: https://scholar.vt.edu/portal
+[webstore]: https://chrome.google.com/webstore/detail/scholar-tab-renamer/eioglgfcfkhhmkpjcjhepgcbhadcpcam
 
 I got annoyed with always needing to think so hard about the mapping between
 the names I know courses by, and the CRNs or 4-digit course numbers scholar
