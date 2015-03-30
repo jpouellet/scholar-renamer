@@ -2,8 +2,6 @@ var spans = document.querySelectorAll('.nav-menu a span, ul.otherSitesCategorLis
 var href_re = new RegExp("^https://scholar\.vt\.edu/portal/site/~?([-0-9a-f]+)");
 var data_re = new RegExp("^~?([-0-9a-f]+)$");
 var clickedEl = null;
-/*var elems = {};
-var titles = {};*/
 for (var i = 0; i < spans.length; i++) {
   (function(span, a) {
     // fix dumb redundant tooltip
@@ -72,9 +70,6 @@ chrome.runtime.onMessage.addListener(function(site) {
     console.log(site);
     return;
   };
-
-  // just assume all non-uuid things are ~pid for "My Workspace"
-  //var uuid = (site[0] === '~' && Object.keys(elems)[0] || site);
 
   //var span = elems[uuid];
   var span = clickedEl;

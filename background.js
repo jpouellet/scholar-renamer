@@ -5,7 +5,6 @@ function och(info, tab) {
   console.log("info: " + JSON.stringify(info));
   console.log("tab: " + JSON.stringify(tab));
   var site = re.exec(info.linkUrl)[1];
-  console.log(site);
   chrome.tabs.sendMessage(tab.id, site);
 }
 
