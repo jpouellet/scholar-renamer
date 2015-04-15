@@ -60,6 +60,9 @@ chrome.runtime.onMessage.addListener(function(site) {
     span.contentEditable = false;
     span.parentElement.href = href;
 
+    // Removes selection if the text is selected after editting
+    sel.removeAllRanges();
+
     // only fire once
     span.removeEventListener('blur', onblur);
     span.removeEventListener('keydown', onkeydown);
